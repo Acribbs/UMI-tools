@@ -207,6 +207,12 @@ class get_bundles:
             self.barcode_getter = partial(
                 get_barcode_read_id,
                 cell_barcode=self.options.per_cell,
+                sep=self.options.umi_sep)
+
+        if self.options.get_umi_method == "read_id" and self.options.dual_nucleotide:
+            self.barcode_getter = partial(
+                get_barcode_read_id,
+                cell_barcode=self.options.per_cell,
                 dual_nucleotide=self.options.dual_nucleotide,
                 sep=self.options.umi_sep)
 
