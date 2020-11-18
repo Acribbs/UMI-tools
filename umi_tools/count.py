@@ -83,6 +83,11 @@ def main(argv=None):
                       default=False,
                       help=("output the cell counts in a wide format "
                             "(rows=genes, columns=cells)"))
+    parser.add_option("--dual-nucleotide", dest="dual_nucleotide",
+                      action="store_true",
+                      default=False,
+                      help=("specifies if the oligonucleotide is composed of"
+                            "dual nucleotides"))
 
     parser.add_option_group(group)
 
